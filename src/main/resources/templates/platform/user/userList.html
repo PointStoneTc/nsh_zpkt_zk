@@ -3,50 +3,75 @@
 <head>
 <title>用户列表</title>
 <meta http-equiv="Content-Type" text1ent="text/html; charset=UTF-8" />
-<link rel="stylesheet" type="text/css" th:href="@{/plug-in/easyui/themes/black/easyui.css}">
-<link rel="stylesheet" type="text/css" th:href="@{/plug-in/easyui/themes/icon.css}">
-<link rel="stylesheet" type="text/css" th:href="@{/style/css/customer.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/plug-in/easyui/themes/black/easyui.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/plug-in/easyui/themes/icon.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/style/css/customer.css}">
 <script type="text/javascript" th:src="@{/js/common/dataformat.js}"></script>
 <script type="text/javascript" th:src="@{/js/common/numberal.js}"></script>
 <script type="text/javascript" th:src="@{/js/common/currencyformat.js}"></script>
 <script type="text/javascript" th:src="@{/js/common/common.js}"></script>
 <script type="text/javascript" th:src="@{/plug-in/easyui/jquery.min.js}"></script>
-<script type="text/javascript" th:src="@{/plug-in/easyui/jquery.easyui.min.js}"></script>
-<script type="text/javascript" th:src="@{/plug-in/easyui/extends/datagridview/datagrid-detailview.js}"></script>
-<script type="text/javascript" th:src="@{/plug-in/easyui/locale/easyui-lang-zh_CN.js}"></script>
-<script type="text/javascript" th:src="@{/js/platform/user/userListView.js}"></script>
+<script type="text/javascript"
+	th:src="@{/plug-in/easyui/jquery.easyui.min.js}"></script>
+<script type="text/javascript"
+	th:src="@{/plug-in/easyui/extends/datagridview/datagrid-detailview.js}"></script>
+<script type="text/javascript"
+	th:src="@{/plug-in/easyui/locale/easyui-lang-zh_CN.js}"></script>
+<script type="text/javascript"
+	th:src="@{/js/platform/user/userListView.js}"></script>
 </head>
 <body>
 	<div class="easyui-panel" data-options="fit:true">
-		<table id="userDataGrid" rownumbers="true" fit="true" url="userDatagrid" pagination="true" pageSize="20" title="用户记录" singleSelect="true" border="true" fitColumns="true"
-			method="get" toolbar="#tb">
+		<table id="userDataGrid" rownumbers="true" fit="true"
+			url="userDatagrid" pagination="true" pageSize="20" title="用户记录"
+			singleSelect="true" border="true" fitColumns="true" method="get"
+			toolbar="#tb">
 			<thead>
 				<tr>
 					<th data-options="field:'id',hidden: true" rowspan="2">id</th>
-					<th data-options="field:'userName',width:80,align:'center'" rowspan="2">用户名</th>
-					<th data-options="field:'userNo',width:120,align:'center'" rowspan="2">用户号</th>
+					<th data-options="field:'userName',width:80,align:'center'"
+						rowspan="2">用户名</th>
+					<th data-options="field:'userNo',width:120,align:'center'"
+						rowspan="2">用户号</th>
 					<th colspan="4">缴费分析</th>
 					<th colspan="6">用气分析</th>
-					<th data-options="field:'_operate',width:80,align:'center',formatter:formatOper" rowspan="2">操作</th>
+					<th
+						data-options="field:'_operate',width:80,align:'center',formatter:formatOper"
+						rowspan="2">操作</th>
 				</tr>
 				<tr>
-					<th data-options="field:'sumOpt',width:40,align:'center', formatter:subFrequency">缴费次数</th>
-					<th data-options="field:'minOptTime',width:90,align:'center',formatter:formatDate">最初缴费日期</th>
-					<th data-options="field:'maxOptTime',width:90,align:'center',formatter:formatDate">最终缴费日期</th>
-					<th data-options="field:'subOptDay',width:40,align:'center',formatter:intervalDay">未使用(天)</th>
-					<th data-options="field:'sumAirVal',width:60,align:'center',formatter:formatNumNoDisplay">总用气量(m³)</th>
-					<th data-options="field:'sumLateFee',width:120,align:'center',formatter:formatMoney">总滞纳金(元)</th>
-					<th data-options="field:'sumPayAbleAirCost',width:120,align:'center',formatter:formatMoney">总应缴费(元)</th>
-					<th data-options="field:'maxAirVal',width:60,align:'center', formatter:formatNumNoDisplay">最大用气量(m³)</th>
-					<th data-options="field:'minAirVal',width:60,align:'center', formatter:formatNumNoDisplay">最小用气量(m³)</th>
-					<th data-options="field:'avgAirVal',width:60,align:'center', formatter:formatNumNoDisplay">平均用气量(m³)</th>
+					<th
+						data-options="field:'sumOpt',width:40,align:'center', formatter:subFrequency">缴费次数</th>
+					<th
+						data-options="field:'minOptTime',width:90,align:'center',formatter:formatDate">最初缴费日期</th>
+					<th
+						data-options="field:'maxOptTime',width:90,align:'center',formatter:formatDate">最终缴费日期</th>
+					<th
+						data-options="field:'subOptDay',width:40,align:'center',formatter:intervalDay">未使用(天)</th>
+					<th
+						data-options="field:'sumAirVal',width:60,align:'center',formatter:formatNumNoDisplay">总用气量(m³)</th>
+					<th
+						data-options="field:'sumLateFee',width:120,align:'center',formatter:formatMoney">总滞纳金(元)</th>
+					<th
+						data-options="field:'sumPayAbleAirCost',width:120,align:'center',formatter:formatMoney">总应缴费(元)</th>
+					<th
+						data-options="field:'maxAirVal',width:60,align:'center', formatter:formatNumNoDisplay">最大用气量(m³)</th>
+					<th
+						data-options="field:'minAirVal',width:60,align:'center', formatter:formatNumNoDisplay">最小用气量(m³)</th>
+					<th
+						data-options="field:'avgAirVal',width:60,align:'center', formatter:formatNumNoDisplay">平均用气量(m³)</th>
 				</tr>
 			</thead>
 		</table>
 
 		<div id="tb" style="padding: 2px 5px;">
-			用户名: <input name="userName" id="userName" style="width: 110px" /> 用户号: <input name="userNo" id="userNo" style="width: 110px" /><a id="search" href="#">查询</a><a href="#"
-				class="easyui-linkbutton" iconCls="icon-clear" onclick="doClean()">清空</a>
+			用户名: <input name="userName" id="userName" style="width: 110px" />
+			用户号: <input name="userNo" id="userNo" style="width: 110px" /><a
+				id="search" href="#">查询</a><a href="#" class="easyui-linkbutton"
+				iconCls="icon-clear" onclick="doClean()">清空</a>
 		</div>
 	</div>
 </body>

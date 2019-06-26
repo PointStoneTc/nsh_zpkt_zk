@@ -3,24 +3,34 @@
 <head>
 <title>交易流水</title>
 <meta http-equiv="Content-Type" text1ent="text/html; charset=UTF-8" />
-<link rel="stylesheet" type="text/css" th:href="@{/plug-in/easyui/themes/black/easyui.css}">
-<link rel="stylesheet" type="text/css" th:href="@{/plug-in/easyui/themes/icon.css}">
-<link rel="stylesheet" type="text/css" th:href="@{/style/css/operationView.css}">
-<link rel="stylesheet" type="text/css" th:href="@{/style/css/customer.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/plug-in/easyui/themes/black/easyui.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/plug-in/easyui/themes/icon.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/style/css/operationView.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/style/css/customer.css}">
 <script type="text/javascript" th:src="@{/js/common/dataformat.js}"></script>
 <script type="text/javascript" th:src="@{/js/common/numberal.js}"></script>
 <script type="text/javascript" th:src="@{/js/common/currencyformat.js}"></script>
 <script type="text/javascript" th:src="@{/js/common/common.js}"></script>
 <script type="text/javascript" th:src="@{/plug-in/easyui/jquery.min.js}"></script>
-<script type="text/javascript" th:src="@{/plug-in/easyui/jquery.easyui.min.js}"></script>
-<script type="text/javascript" th:src="@{/plug-in/easyui/extends/datagridview/datagrid-detailview.js}"></script>
-<script type="text/javascript" th:src="@{/plug-in/easyui/locale/easyui-lang-zh_CN.js}"></script>
-<script type="text/javascript" th:src="@{/js/platform/user/streamListView.js}"></script>
+<script type="text/javascript"
+	th:src="@{/plug-in/easyui/jquery.easyui.min.js}"></script>
+<script type="text/javascript"
+	th:src="@{/plug-in/easyui/extends/datagridview/datagrid-detailview.js}"></script>
+<script type="text/javascript"
+	th:src="@{/plug-in/easyui/locale/easyui-lang-zh_CN.js}"></script>
+<script type="text/javascript"
+	th:src="@{/js/platform/user/streamListView.js}"></script>
 </head>
 <body>
 	<div class="easyui-panel" data-options="fit:true">
-		<table id="streamDataGrid" rownumbers="true" fit="true" url="streamDatagrid" pagination="true" pageSize="20" title="交易流水" singleSelect="true" border="true" fitColumns="true"
-			method="get" toolbar="#tb">
+		<table id="streamDataGrid" rownumbers="true" fit="true"
+			url="streamDatagrid" pagination="true" pageSize="20" title="交易流水"
+			singleSelect="true" border="true" fitColumns="true" method="get"
+			toolbar="#tb">
 			<thead>
 				<tr>
 					<th data-options="field:'id',hidden: true">id</th>
@@ -29,19 +39,26 @@
 					<th data-options="field:'userName',width:80,align:'center'">用户名</th>
 					<th data-options="field:'userNo',width:80,align:'center'">用户号</th>
 					<th data-options="field:'bankCommandName',width:80,align:'center'">交易类型</th>
-					<th data-options="field:'createDate',width:80,align:'center',formatter:formatDate">交易日期</th>
-					<th data-options="field:'value',width:100,align:'center', formatter:formatValue">交易信息</th>
+					<th
+						data-options="field:'createDate',width:80,align:'center',formatter:formatDate">交易日期</th>
+					<th
+						data-options="field:'value',width:100,align:'center', formatter:formatValue">交易信息</th>
 				</tr>
 			</thead>
 		</table>
 
 		<div id="tb" style="padding: 2px 5px;">
-			用户名: <input name="userName" id="userName" style="width: 110px" /> 用户号: <input name="userNo" id="userNo" style="width: 110px" />交易日期: <input name="createDate" id="createDate"
-				style="width: 110px" />交易类型: <select name="bankCommand" id="bankCommand" panelHeight="auto" style="width: 120px">
+			用户名: <input name="userName" id="userName" style="width: 110px" />
+			用户号: <input name="userNo" id="userNo" style="width: 110px" />交易日期: <input
+				name="createDate" id="createDate" style="width: 110px" />交易类型: <select
+				name="bankCommand" id="bankCommand" panelHeight="auto"
+				style="width: 120px">
 				<option value="-1" selected="selected">---请选择---</option>
 				<option value="821">交易缴费</option>
 				<option value="850">用户冲帐</option>
-			</select>流水号: <input name="value" id="value" style="width: 110px" /><a id="search" href="#">查询</a><a href="#" class="easyui-linkbutton" iconCls="icon-clear" onclick="doClean()">清空</a>
+			</select>流水号: <input name="value" id="value" style="width: 110px" /><a
+				id="search" href="#">查询</a><a href="#" class="easyui-linkbutton"
+				iconCls="icon-clear" onclick="doClean()">清空</a>
 		</div>
 	</div>
 </body>
