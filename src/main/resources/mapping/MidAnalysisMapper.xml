@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zkpt.platform.dao.AnalysisMapper">
+	<resultMap id="DayPaymentStreamMap" type="com.zkpt.platform.entity.AnalyYMPaymentStream">
+		<result column="CT" jdbcType="INTEGER" property="ct" />
+		<result column="SUM_MONEY" jdbcType="INTEGER" property="sumMoney" />
+		<result column="DAY" jdbcType="SMALLINT" property="day" />
+	</resultMap>
+	
+	<resultMap id="DayOperationTimesMap" type="com.zkpt.platform.entity.AnalyYMOperationTimes">
+		<result column="CT" jdbcType="INTEGER" property="ct" />
+		<result column="BANK_COMMAND" jdbcType="VARCHAR" property="bankCommand" />
+		<result column="DAY" jdbcType="SMALLINT" property="day" />
+	</resultMap>
+
+	<!-- 指定年、月的日统计收入 -->
+	<select id="paymentStreamAmountByYM" resultMap="DayPaymentStreamMap">
+		SELECT
+			count(1) CT,
+			SUM(t.MONEY) SUM_MONEY,
+			t.DAY DAY
+		FROM
+			(
+				SELECT
+					*
+				FROM
+					v_payment_stream
+				WHERE
+					YEAR = #{year}
+				AND MONTH = #{month}
+			) t
+		GROUP BY
+			DAY
+	</select>
+	
+	<!-- 指定年、月的日访问量 -->
+	<select id="operatoinTimesByYM" resultMap="DayOperationTimesMap">
+		SELECT
+			count(1) CT,
+			DAY
+		FROM
+			v_opeartion
+		WHERE
+			YEAR = #{year}
+		AND MONTH = #{month}
+		GROUP BY
+			FULL
+	</select>
+</mapper>

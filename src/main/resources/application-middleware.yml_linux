@@ -1,0 +1,57 @@
+#==================== 中间件 == ==============================
+middleware:
+  server:
+    bank:
+      ip: 11.49.35.48
+      port: 8001
+      bufferSize: 2048
+      idleTime: 10
+      loggerFilterName: logger
+      referenceCountingFilterName: myIoFilter
+      protocolCodecFilterName: coderc
+      charSetName: gbk
+    ftp:
+      ip: 11.49.35.48
+      port: 21
+      user: ftpzkpt
+      pwd: zkpt380
+      workpath:
+  client:
+    gas:
+      ip: 11.39.63.52
+      port: 5083
+      connectTimeoutMillis: 20000
+      readBufferSize: 1024
+      both_idle: 10
+      reader_idle: 15
+      writer_idle: 15
+      loggerFilterName: logger
+      referenceCountingFilterName: myIoFilter
+      protocolCodecFilterName: coderc
+      charSetName: gbk
+    ftp:
+      ip: 11.39.63.52
+      port: 21
+      user: nongxinshe
+      pwd: 123456
+      workpath:
+  bank:
+    newCode: '0008'
+    oldCode: '0009'
+  ledger:
+    charSetName: gbk
+    downloadPath: /home/zkpt/dzmx/
+    defaultFileExtensionName: .txt
+    ledgerNameBank: DZMX.
+    ledgerNameGas: _DZYY_
+  maxSessionSize: 100 # 最大IP连接数
+  lockedIp: false  # 是否锁定一个IP只能一个连接
+ 
+test:
+  client:
+    bank:
+      connectTimeoutMillis: 5000
+      loggerFilterName: logger
+      referenceCountingFilterName: myIoFilter
+      protocolCodecFilterName: coderc
+      charSetName: gbk

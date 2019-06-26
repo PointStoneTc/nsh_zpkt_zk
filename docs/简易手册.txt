@@ -1,0 +1,14 @@
+先登陆zkpt-test用户：
+密码是Q9)^5Txn*
+
+配置下面的都需要用root用户执行
+登陆root用户：
+su - root
+密码是&yf(%29H/vs
+
+  关闭防火墙：
+  service iptables stop
+  
+  开启防火墙：
+  service iptables start
+  

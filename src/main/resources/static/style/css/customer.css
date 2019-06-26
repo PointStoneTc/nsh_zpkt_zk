@@ -1,0 +1,79 @@
+.easyui-formatter-money {
+	color: #99FF00;
+	display: inline-block;
+	width: 80px;
+	text-align: right;
+}
+
+.money-rmb::before {
+	content: '￥';
+	margin-right: 80px;
+}
+
+.num_tip {
+	width: 48px;
+	height: 48px;
+	overflow: hidden;
+	border-radius: 30px;
+	text-align: center;
+	font-size: 24px;
+	line-height: 48px;
+	color: #fff;
+	position: absolute;
+	left: 20px;
+	top: 10px;
+}
+
+.atip {
+	background-color: #ff9600;
+}
+
+.btip {
+	background-color: #679d21;
+}
+
+.alarm_start {
+	color: #FFFFFF;
+}
+
+.alarm_normal {
+	color: #99FF00;
+}
+
+.alarm_danger {
+	color: #FFFF00;
+}
+
+.alarm_terror {
+	color: #FF69B4;
+}
+
+.txtbreak {
+	width: 250px;
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.red {
+	color: #FF0000;
+}
+
+.green{
+	color: #99FF00;
+}
+
+/* 数字负数 */
+.num_negative {
+	color: #f63636;
+}
+
+.num_negative::before {
+	content: '(';
+}
+
+.num_negative::after {
+	content: ')';
+}

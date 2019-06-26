@@ -1,0 +1,51 @@
+.ddv {
+	font-size: 1em;
+	width: 350px;
+	float: left;
+	margin-right: 50px;
+	position: relative;
+	zoom: 1;
+	padding-left: 70px;
+}
+
+.ddv ul {
+	display: block;
+	margin: 0;
+}
+
+.ddv li {
+	padding: 2px 0;
+	width: 320px;
+	line-height: 24px;
+	height: auto;
+	word-break: break-all;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+.ddv .title {
+	font-size: 1em;
+	color: #9AB88C;
+}
+
+.ddv .title::before {
+	content: '------<';
+}
+
+.ddv .title::after {
+	content: '>------';
+}
+
+.ddv .text {
+	color: #E7E6BC;
+	width: 100px;
+}
+
+.ddv .text1 {
+	padding-left: 5px;
+}
+
+.ddv1 {
+	clear: both;
+	margin-bottom: 5px;
+}

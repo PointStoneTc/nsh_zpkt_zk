@@ -1,0 +1,6 @@
+START CHECKQF...
+1.EXECUTE "banksrv_upt.prc_del_dz" OK
+2.PREPARE "banksrv_upt.prc_inst_dz" OK
+3.EXECUTE "banksrv_upt.prc_inst_dz" 19 OK
+3.EXECUTE "banksrv_upt.prc_checkqf" OK 
+银行[003], 对账结束[banksrv_upt.prc_checkqf,0000,]
