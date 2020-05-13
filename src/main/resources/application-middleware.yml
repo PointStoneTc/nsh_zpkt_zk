@@ -11,7 +11,7 @@ middleware:
       protocolCodecFilterName: coderc
       charSetName: gbk
     ftp:
-      ip: 192.168.43.103
+      ip: 192.168.0.103
       port: 21
       user: root
       pwd: 123456
@@ -30,9 +30,9 @@ middleware:
       protocolCodecFilterName: coderc
       charSetName: gbk
     ftp:
-      ip: 192.168.43.103
-      port: 21
-      user: root
+      ip: 125.46.69.214
+      port: 8992
+      user: nongxin
       pwd: 123456
       workpath:
   bank:
@@ -40,7 +40,7 @@ middleware:
     oldCode: '0009'
   ledger:
     charSetName: gbk
-    downloadPath: c:/Downloads/
+    downloadPath: c:/xz/
     defaultFileExtensionName: .txt
     ledgerNameBank: DZMX.
     ledgerNameGas: _DZYY_
